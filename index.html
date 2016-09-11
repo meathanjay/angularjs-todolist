@@ -1,18 +1,22 @@
 <!doctype html>
 <html>
   <head>
+    <title>Todo List App</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato|Varela+Round" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
-  <body ng-app="todoApp">
+  <body ng-app="todoApp" class="todoListApp">
       <h1>My TODOs</h1>
       <div ng-controller="mainCtrl" class="list">
-        <input type="checkbox">
-        <label class="editing-label">A Sample Todo</label>
-        <input type="text" class="editing-label">
-        <div class="actions">
-          <a href="" class="edit" ng-click="helloWorld()">Edit</a>
-          <a href="" class="save">Save</a>
-          <a href="" class="delete">Delete</a>
+        <div ng-repeat="todo in todos" class="item">
+          <input ng-model="todo.completed" type="checkbox">
+          <label ng-hide="editing" class=""> {{ todo.name }}</label>
+          <input ng-blur="editing = false" ng-show="editing" ng-model="todo.name" type="text" class="editing-label">
+          <div class="actions">
+            <a href="" class="edit" ng-click=" editing = !editing ">Edit</a>
+            <a href="" class="save" ng-click="whoIAm()">Save</a>
+            <a href="" class="delete">Delete</a>
+          </div>
         </div>
       </div>
   </body>

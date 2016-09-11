@@ -23,15 +23,20 @@ a {
     padding: 17px 0 18px 17px; }
     .list .item label {
       padding-left: 5px;
-      cursor: pointer; }
+      cursor: pointer;
+      border: 1px solid transparent;
+      //font-size: 14px;
+  }
     .list .item .editing-label {
       margin-left: 5px;
       font-family: "Varela Round";
-      border-radius: 2px;
-      border: 2px solid #a7b9c4;
+      border: 1px solid #a7b9c4;
+      padding: 0 5px;
+      width: 60%;
+      margin-top: -1px;
+      margin-bottom: -1px;
       font-size: 16px;
-      padding: 15px 0 15px 10px;
-      width: 60%; }
+  }
     .list .item .actions {
       float: right;
       margin-right: 20px; }
@@ -54,7 +59,7 @@ a {
   .list .add {
     padding: 25px 0 27px 25px; }
 
-input[type="checkbox"] {
+/*input[type="checkbox"] {
     display:none;
 }
 input[type="checkbox"] + span {
@@ -68,4 +73,4 @@ input[type="checkbox"] + span {
 }
 input[type="checkbox"]:checked + span {
     background:url(checkbox-filled.svg) left top no-repeat;
-}
+}*/

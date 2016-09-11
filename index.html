@@ -7,24 +7,12 @@
   </head>
   <body ng-app="todoApp" class="todoListApp">
       <h1>My TODOs</h1>
-      <div ng-controller="mainCtrl" class="list">
-        <div class="add">
-        <a href="" ng-click="addTodo()">+ add a task</a>
-        </div>
-        <div ng-repeat="todo in todos" class="item">
-          <input ng-model="todo.completed" type="checkbox">
-          <label ng-hide="editing" class=""> {{ todo.name }}</label>
-          <input ng-blur="editing = false" ng-show="editing" ng-model="todo.name" type="text" class="editing-label">
-          <div class="actions">
-            <a href="" class="edit" ng-click=" editing = !editing ">Edit</a>
-            <a href="" class="save" ng-click="saveTodo(todo)">Save</a>
-            <a href="" class="delete" ng-click="deleteTodo(todo, $index)">Delete</a>
-          </div>
-        </div>
-      </div>
+      <todos></todos>
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="src/app.js"></script>
-  <script src="src/hello-world.js"></script>
+  <script src="src/services/todoService.js"></script>
+  <script src="src/controllers/mainController.js"></script>
+  <script src="src/directives/todosDirective.js"></script>
 </html>

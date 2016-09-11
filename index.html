@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-app="todoApp">
+      <h1>My TODOs</h1>
+      <div ng-controller="mainCtrl" class="list">
+        <input type="checkbox">
+        <label class="editing-label">A Sample Todo</label>
+        <input type="text" class="editing-label">
+        <div class="actions">
+          <a href="" class="edit" ng-click="helloWorld()">Edit</a>
+          <a href="" class="save">Save</a>
+          <a href="" class="delete">Delete</a>
+        </div>
+      </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="src/app.js"></script>
+  <script src="src/hello-world.js"></script>
+</html>
